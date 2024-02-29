@@ -24,7 +24,7 @@
 }
 
 .hero-button {
-  transform: translateX(45%);
+  transform: translateX(40%);
 }
 
 /* Adjust padding for smaller screens */
@@ -147,7 +147,7 @@
   border: none;
   outline: none;
   color: #9CD9F0;
-  ;
+  
   font-family: 'Courier New', Courier, monospace;
   font-size: 16px;
   padding-left: 10px;
@@ -762,12 +762,11 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
   overflow: hidden;
 }
 
 #hero {
-  padding: 0 !important;
+
 }
 
 #about,
