@@ -5,7 +5,8 @@
   padding: 20px;
   display: block;
   transition: height 0.3s ease-in-out;
- 
+  margin-top: 120px !important;
+
 }
 
 .terminal-container {
@@ -18,15 +19,19 @@
   overflow: hidden;
 }
 
-.hero-container{
+.hero-container {
   margin-left: -12%;
+}
+
+.hero-button {
+  transform: translateX(45%);
 }
 
 /* Adjust padding for smaller screens */
 .container,
 .container-fluid {
-  
-  padding-left: 30px ;
+
+  padding-left: 30px;
   padding-right: 30px;
 }
 
@@ -40,13 +45,35 @@
   #hero span {
     font-size: 10px;
   }
-  .terminal{
+
+  .terminal {
     width: 300px !important;
-    border: 1px solid #b4cebc;    
+    border: 1px solid #b4cebc;
     background-color: #040b14 !important;
     border-radius: 2px;
+
   }
-  .fakeScreen{
+
+  .hero-container {
+    margin-left: 12% !important;
+  }
+
+  .hero-button {
+    margin-right: 17%;
+  }
+
+  .hero-button .btn1 {
+    width: 70px;
+    height: 30px;
+    font-size: 10px;
+  }
+  .hero-button .btn2 {
+    width: 76px;
+    height: 30px;
+    font-size: 10px;
+  }
+
+  .fakeScreen {
     background-color: #040b14 !important;
   }
 
@@ -56,21 +83,22 @@
 
   #input {
     font-size: 12px !important;
-  
+
   }
-  #input ::placeholder{
+
+  #input ::placeholder {
     font-size: 12px !important;
   }
- 
+
   .show-commands {
     font-size: 8px !important;
   }
-  
+
   .commands {
     font-size: 8px !important;
   }
 
-  
+
 
 }
 
@@ -80,10 +108,11 @@
   box-sizing: border-box;
   width: 100%;
   min-height: 500px;
-  padding: 20px;  /* Adjust maximum width as needed */
+  padding: 20px;
+  /* Adjust maximum width as needed */
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
- 
+
 }
 
 .fakeScreen p {
@@ -117,7 +146,8 @@
   background-color: transparent;
   border: none;
   outline: none;
-  color: #9CD9F0;;
+  color: #9CD9F0;
+  ;
   font-family: 'Courier New', Courier, monospace;
   font-size: 16px;
   padding-left: 10px;
@@ -157,7 +187,7 @@
   -moz-animation: blink 1s 2s 2 forwards;
   -o-animation: blink 1s 2s 2 forwards;
   animation: blink 1s 2s 2 forwards;
-} 
+}
 
 .line2 {
   color: #CDEE69;
@@ -734,6 +764,17 @@ h6 {
 section {
   padding: 60px 0;
   overflow: hidden;
+}
+
+#hero {
+  padding: 0 !important;
+}
+
+#about,
+#skills,
+#projects,
+#contact {
+  padding-top: 60px !important;
 }
 
 .section-bg {
