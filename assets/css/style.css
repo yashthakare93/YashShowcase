@@ -24,7 +24,7 @@
 }
 
 .hero-button {
-  transform: translateX(40%);
+  transform: translateX(30%);
 }
 
 /* Adjust padding for smaller screens */
@@ -766,7 +766,7 @@ section {
 }
 
 #hero {
-
+padding:0px !important;
 }
 
 #about,
