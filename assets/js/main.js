@@ -6,6 +6,7 @@
   /**
    * Easy selector helper function
    */
+ 
 
   document.getElementById('contact-form').addEventListener('submit', function(event) {
     // Prevent the default form submission behavior
