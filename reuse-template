@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title Here</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Blogs</a></li>
+            <li class="breadcrumb-item"><a href="#">System Design</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Current Page</li>
+        </ol>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <!-- Table of Contents -->
+            <div class="col-3">
+                <nav id="toc" class="h-0 flex-column pe-4 border-end">
+                    <nav class="nav nav-pills flex-column">
+                        <h3>Table of Contents</h3>
+                        <a class="nav-link">Section 1</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#subsection-1">Subsection 1</a>
+                        </nav>
+                        <a class="nav-link">Section 2</a>
+                        <a class="nav-link">Section 3</a>
+                        <!-- Add more sections and subsections as needed -->
+                    </nav>
+                </nav>
+                <!-- References -->
+                <nav id="references" class="h-70 flex-column align-items-stretch pe-4 border-end">
+                    <nav class="nav nav-pills flex-column">
+                        <h3>References</h3>
+                        <li>
+                            <!-- Add your references here -->
+                            <iframe width="250" height="165" src="https://www.youtube.com/embed/VIDEO_ID"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </li>
+                    </nav>
+                </nav>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-9">
+                <div data-bs-spy="scroll" data-bs-target="#toc" data-bs-smooth-scroll="true"
+                    class="scrollspy-example-2" tabindex="0">
+                    <!-- Blog Title -->
+                    <h1 class="blog-title">Blog Title</h1>
+                    <div class="blog-post">
+                        <!-- Post Header -->
+                        <div class="post-header" id="section-1">
+                            <!-- Date or other meta information -->
+                            <p><strong>Date:</strong> May 30, 2024</p>
+                        </div>
+                        <!-- Post Content -->
+                        <div class="post-content">
+                            <!-- Add your content here -->
+                            <p>Content goes here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="copyright">
+                &copy; <strong><span>Your Name</span></strong>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>

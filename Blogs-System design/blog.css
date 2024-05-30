@@ -1,0 +1,125 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    z-index: 999;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+}
+
+.blog-title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+
+.toc {
+position: sticky;
+    top: 20px; /* Adjust as needed */
+    padding: 6px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: white; /* Optional: Add background color */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.toc h4 {
+    color: #007bff;
+}
+
+.toc ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.toc ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.toc ul li a:hover {
+    text-decoration: underline;
+}
+
+.blog-post {
+    max-width: 1000px;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.post-header {
+    margin-bottom: 20px;
+}
+
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.post-footer {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.post-header h2,
+.post-content h3 {
+    color: #007bff;
+}
+
+.post-content p,
+.post-content ul {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.post-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.post-content ul li {
+    margin-bottom: 10px;
+}
+
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.container {
+    display: flex;
+
+}
+
+.content {
+    flex: 3;
+    padding: 0 px;
+}
+
+.ref {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ref iframe {
+    width: 100%;
+    max-width: 250px; /* Adjust as needed */
+    height: auto;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is CDN ? Understanding Content Delivery Network</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="blog.css">
+    <!-- Favicons -->
+    <link href="../assets/img/favicon.png" rel="icon">
+    <link href="../assets/img/favicon.png" rel="apple-touch-icon">
+</head>
+
+<body>
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="../blogs.html">Blogs</a></li>
+            <li class="breadcrumb-item"><a href="#">System Design</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Understanding CDN</li>
+        </ol>
+    </nav>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <nav id="navbar-example3" class=" h-0 flex-column  pe-4 border-end">
+                    <nav class="nav nav-pills flex-column">
+                        <h3>Table of Contents</h3>
+                        <a class="nav-link">Introduction to CDN</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#evolution-purpose">Evolution and Purpose</a>
+                        </nav>
+                        <a class="nav-link">Content Delivery</a>
+                        <a class="nav-link">Server Deployment (Point of Presence - PoPs)</a>
+                        <a class="nav-link">Routing Technologies</a>
+                        <a class="nav-link">Edge Server Functionality</a>
+                        <a class="nav-link">Content Transformation</a>
+                        <a class="nav-link">TLS Termination</a>
+                        <a class="nav-link">Additional Benefits</a>
+                        <a class="nav-link">Some interview questions</a>
+
+                    </nav>
+
+                </nav>
+                <nav id="navbar-example3" class="toc h-70 flex-column align-items-stretch pe-4 border-end">
+                    <nav class="nav nav-pills flex-column">
+                        <h3>References </h3>
+
+                        <li class="ref">
+                            <iframe width="250" height="165"
+                                src="https://www.youtube.com/embed/8zX0rue2Hic?si=ACW_-97MTlzRuryL"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="250" height="165"
+                                src="https://www.youtube.com/embed/RI9np1LWzqw?si=T2_-gTsRMbhtPsmY"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </li>
+                    </nav>
+                </nav>
+
+            </div>
+
+            <div class="col-9">
+                <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true"
+                    class="scrollspy-example-2" tabindex="0">
+
+                    <h1 class="blog-title">What is a Content Delivery Network? Understanding CDN ? </h1>
+                    <div class="blog-post">
+                        <div class="post-header" id="what-is-cdn">
+
+                            <p><strong>Date:</strong> May 30, 2024</p>
+                        </div>
+                        <div class="post-content">
+                            <p>CDN is content delivery network has been around since 90s. It was originally developed to
+                                speed up the delivery of static HTML content for users all around the world.
+                                Nowadays, a CDN should be used whenever HTTP traffic is served.</p>
+                            <img src="./img/cdn.webp" alt="CDN Diagram">
+                            <h3 id="cdn-working">Working of a CDN</h3>
+                            <p><strong>1. Content Distribution:</strong> The CDN consists of a network of servers
+                                distributed across various geographic locations, known as Points of Presence (PoPs).
+                                These servers store cached copies of website content, such as images, videos, scripts,
+                                and other static assets.</p>
+                            <p><strong>2. User Request:</strong> When a user accesses a website, their browser sends a
+                                request to the website's origin server to retrieve the content. However, if the website
+                                is using a CDN, the request is intercepted by the CDN's edge server located closest to
+                                the user.</p>
+                            <p><strong>3. Edge Server Selection:</strong> The CDN's edge server determines the user's
+                                location based on factors such as IP address and network proximity. It then routes the
+                                user's request to the nearest PoP in the CDN network.</p>
+                            <img src="./img/cdnworking.png" alt="CDN Working Diagram">
+                            <p><strong>4.Content Delivery:</strong> The edge server at the PoP retrieves the requested
+                                content from the origin server, if it's not already cached locally. It then delivers the
+                                content to the user's browser.</p>
+                            <p><strong>5. Caching and Optimization:</strong> The edge server caches the content locally
+                                for future requests, reducing the need to fetch it from the origin server again.
+                                Additionally, modern CDNs often perform optimizations such as minification, compression,
+                                and format conversion to further improve performance.</p>
+                            <p><strong>6. Load Balancing and Redundancy:</strong> CDNs use load balancing techniques to
+                                distribute traffic evenly across their network of edge servers, preventing any single
+                                server from becoming overloaded. Moreover, CDNs offer redundancy and failover mechanisms
+                                to ensure high availability in case of server failures or network issues.</p>
+                            <p><strong>7. Dynamic Content Delivery:</strong> While CDNs are primarily used for caching
+                                static content, they also support dynamic content delivery through techniques like edge
+                                computing and dynamic caching. This allows CDNs to cache and serve personalized or
+                                dynamically generated content efficiently.</p>
+
+                            <p></p>
+                            <ul>
+                                <li><strong>Edge Servers:</strong> These are servers located at various points of
+                                    presence (PoPs) around the globe. They cache content from the origin server.</li>
+                                <li><strong>Origin Server:</strong> This is the main server where the original content
+                                    is stored.</li>
+                                <li><strong>CDN Provider:</strong> The company that provides the CDN service and
+                                    infrastructure.</li>
+                            </ul>
+                            <h3>Two common ones are DNS-based routing and Anycast:</h3>
+                            <img src="./img/what-is-anycast-2.webp" alt="">
+                            <ul>
+                                <li><strong>with DNS-based routing, each PoP has its own IP address. When the user Looks
+                                        up the IP address for the CDN,DNS returns the IP address of the PoP closest to
+                                        them.</strong>
+                                </li>
+                                <li><strong>with Anycast, all PoPs share the same IP address. When a request comes into
+                                        the Anycast network for that IP address, the network sends the request to the
+                                        PoP that is closest to the requester.</strong></li>
+                            </ul>
+                            <p>Each edge server acts as a reverse proxy with a huge content cache .Static contents are
+                                cached on the edge server in this content cache. If a piece of content is in the cache,
+                                it could be quickly returned to the user. Since edge server only asks for a copy of the
+                                static content from the original server if it is not in its cache, this greatly reduces
+                                the load and bandwidth requirements of the original server cluster.</p>
+
+                            <h3>Content Transformation / TLS Termination</h3>
+                            <img src="./img/file-concatenation_dafc.webp" alt="">
+                            <p>A modern CDN could also transform static content into more optimized formats.
+                                For example, it could minify JavaScript bundles on the fly, or transform an image file
+                                form an old format to modern one like WebP or AVIF.
+                            </p>
+                            <p>
+                                An edge server also serves a very important role in modern HTTP stack. All TLS
+                                connections terminate at the edge server. TLS handshake are expensive .</p>
+                            <h3 id="cdn-benefits">Beside performance, a modern CDN brings two other major benefits:</h3>
+                            <ul>
+                                <li>
+
+                                    Security : All modern CDNs have huge network capacity at the edge. This is the key
+                                    to providing effective DDoS protection against large-scale attacks my having a
+                                    network with a capacity much larger than the attackers.
+
+                                </li>
+                                <li>Availability : By having copies of content available in many PoPs, a CDN can
+                                    withstand many more hardware failures than the origin servers.</strong></li>
+                            </ul>
+                            <h3 id="cdn-providers">Popular CDN Providers</h3>
+                            <p>There are several well-known CDN providers available, including:</p>
+                            <ul>
+                                <li>Cloudflare</li>
+                                <li>Amazon CloudFront</li>
+                                <li>Google Cloud CDN</li>
+                                <li>Microsoft Azure CDN</li>
+                                <li>Fastly</li>
+                                <li>Akamai</li>
+                            </ul>
+                            <p>Each of these providers offers different features and pricing models, so it's important
+                                to choose the one that best fits your needs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <a href="https://www.techprep.app/blog/cdn-interview-questions">
+                        <h3 style="color: black;">Preparing for interview ? Top 23 CDN Questions</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <footer id="footer">
+        <div class="container">
+            <div class="copyright">
+                &copy; <strong><span>YashThakareblogs</span></strong>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="blog.js"></script>
+</body>
+
+</html>

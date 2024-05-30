@@ -2,25 +2,25 @@ const input = document.getElementById('input');
 const fakeScreen = document.querySelector('.fakeScreen');
 const output = document.querySelector('.output');
 
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
 
-    Swal.fire({
-        title: "<strong>URL-SHORTENER</strong>",
-        html: `
-            <b>Check out! Latest project</b>
-            <a href="https://url-shortener-zq7h.onrender.com/login">https://url-shortener-zq7h.onrender.com/</a>
-        `,
-        backdrop: `
-            rgba(0,0,123,0.4)
-            left top
-            no-repeat
-        `,
-        showCloseButton: true,
-        showCancelButton: true,
-        focusConfirm: false,
-        timer: 3000
-    });
-});
+//     Swal.fire({
+//         title: "<strong>URL-SHORTENER</strong>",
+//         html: `
+//             <b>Check out! Latest project</b>
+//             <a href="https://url-shortener-zq7h.onrender.com/login">https://url-shortener-zq7h.onrender.com/</a>
+//         `,
+//         backdrop: `
+//             rgba(0,0,123,0.4)
+//             left top
+//             no-repeat
+//         `,
+//         showCloseButton: true,
+//         showCancelButton: true,
+//         focusConfirm: false,
+//         timer: 3000
+//     });
+// });
 
 document.getElementById("input").setAttribute("autocomplete", "off");
 
