@@ -18,9 +18,9 @@
     <!-- Breadcrumb -->
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Blogs</a></li>
-            <li class="breadcrumb-item"><a href="#">System Design</a></li>
+            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="../blogs.html">Blogs</a></li>
+            <li class="breadcrumb-item"><a href="../blogs.html">System Design</a></li>
             <li class="breadcrumb-item active" aria-current="page">API Gateway</li>
         </ol>
     </nav>
@@ -28,23 +28,27 @@
     <div class="container">
         <div class="row">
             <!-- Table of Contents -->
-            <div class="col-3">
-                <nav id="toc" class="h-0 flex-column pe-4 border-end">
+            <div class="col-0 col-md-4">
+                <nav id="navbar-example3" class=" h-0 flex-column  pe-4 border-end">
                     <nav class="nav nav-pills flex-column">
                         <h3>Table of Contents</h3>
-                        <a class="nav-link">Introduction</a>
-                        <a class="nav-link">What is API Gateway</a>
-                        <a class="nav-link">API Gateway Flow</a>
-                        <a class="nav-link">Rate Limit Check</a>
-                        <a class="nav-link">Authentication Authorization</a>
-                        <a class="nav-link">Critical Service</a>
-                        <a class="nav-link">Conclusion</a>
-                        <a class="nav-link">Interview Questions</a>
-                        <!-- Add more sections and subsections as needed -->
+                        <a class="nav-link">Introduction to CDN</a>
+                        
+                            <a class="nav-link" >Evolution and Purpose</a>
+                        
+                        <a class="nav-link">Content Delivery</a>
+                        <a class="nav-link">Point of Presence - PoPs</a>
+                        <a class="nav-link">Routing Technologies</a>
+                        <a class="nav-link">Edge Server Functionality</a>
+                        <a class="nav-link">Content Transformation</a>
+                        <a class="nav-link">TLS Termination</a>
+                        <a class="nav-link">Additional Benefits</a>
+                        <a class="nav-link">Some interview questions</a>
+
                     </nav>
-                </nav>
+                    </nav>
                 <!-- References -->
-                <nav id="references" class="h-70 flex-column align-items-stretch pe-4 border-end">
+                <nav id="references" class="h-70 flex-column align-items-stretch pe-4 border-end d-none d-md-flex">
                     <nav class="nav nav-pills flex-column">
                         <h3>References</h3>
                         <li>
@@ -59,7 +63,7 @@
             </div>
 
             <!-- Main Content -->
-            <div class="col-9">
+            <div class="col-12 col-md-8">
                 <div data-bs-spy="scroll" data-bs-target="#toc" data-bs-smooth-scroll="true" class="scrollspy-example-2"
                     tabindex="0">
                     <!-- Blog Title -->
@@ -108,8 +112,21 @@
                             <p>These features collectively make an API Gateway a powerful tool for managing the complexities of a distributed system.</p>
                             <h3>Conclusion :</h3>
                             <p>An API Gateway is a critical piece of the infrastructure, it should be deployed to multiple regions to improve availability. Additionally, it acts as a single entry point for all client requests, managing traffic, authentication, and throttling, which enhances security and performance.</p>
+                            <nav id="references" class="h-70 flex-column align-items-stretch pe-4 border-end d-md-none">
+                                <nav class="nav nav-pills flex-column">
+                                    <h3>References</h3>
+                                    <li>
+                                        <!-- Add your references here -->
+                                        <iframe width="250" height="165"
+                                            src="https://www.youtube.com/embed/6ULyxuHKxg8?si=4yfK7u0zv-Ym-S36"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </li>
+                                </nav>
+                                </nav><hr>
                             <a href="https://medium.com/@vadadoriyavivek5/mastering-api-gateway-30-interview-q-a-b4932ba1491c">
-                                <h3 style="color: black;"><u>Preparing for interview ? Top 30+ API Gateway Questions</u></h3>
+                                <h3 style="color: black;">Preparing for interview ? Top 30+ API Gateway Questions</h3>
                             </a>
                         </div>
                     </div>
@@ -120,7 +137,7 @@
 
     <!-- Footer -->
     <footer id="footer">
-        <div class="container">
+        <div class="containers">
             <div class="copyright">
                 &copy; <strong><span>YashThakareblogs</span></strong>
             </div>

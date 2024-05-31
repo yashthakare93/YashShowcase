@@ -28,16 +28,16 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-3">
+            <div class="col-0 col-md-4">
                 <nav id="navbar-example3" class=" h-0 flex-column  pe-4 border-end">
                     <nav class="nav nav-pills flex-column">
                         <h3>Table of Contents</h3>
                         <a class="nav-link">Introduction to CDN</a>
-                        <nav class="nav nav-pills flex-column">
-                            <a class="nav-link ms-3 my-1" >Evolution and Purpose</a>
-                        </nav>
+                        
+                            <a class="nav-link" >Evolution and Purpose</a>
+                        
                         <a class="nav-link">Content Delivery</a>
-                        <a class="nav-link">Server Deployment (Point of Presence - PoPs)</a>
+                        <a class="nav-link">Point of Presence - PoPs</a>
                         <a class="nav-link">Routing Technologies</a>
                         <a class="nav-link">Edge Server Functionality</a>
                         <a class="nav-link">Content Transformation</a>
@@ -48,7 +48,7 @@
                     </nav>
 
                 </nav>
-                <nav id="navbar-example3" class="toc h-70 flex-column align-items-stretch pe-4 border-end">
+                <nav id="navbar-example3" class="toc h-70 flex-column align-items-stretch pe-4 border-end  d-none d-md-flex">
                     <nav class="nav nav-pills flex-column">
                         <h3>References </h3>
 
@@ -69,7 +69,7 @@
 
             </div>
 
-            <div class="col-9">
+            <div class="col-12 col-md-8">
                 <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true"
                     class="scrollspy-example-2" tabindex="0">
 
@@ -175,7 +175,24 @@
                         </div>
                     </div>
                 </div>
+                <nav id="navbar-example3" class="toc h-70 flex-column align-items-stretch pe-4 d-md-none border-end">
+                    <nav class="nav nav-pills flex-column">
+                        <h3>References </h3>
 
+                        <li class="ref">
+                            <iframe width="250" height="165"
+                                src="https://www.youtube.com/embed/8zX0rue2Hic?si=ACW_-97MTlzRuryL"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="250" height="165"
+                                src="https://www.youtube.com/embed/RI9np1LWzqw?si=T2_-gTsRMbhtPsmY"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </li>
+                    </nav>
+                </nav>
                 <div>
                     <a href="https://www.techprep.app/blog/cdn-interview-questions">
                         <h3 style="color: black;">Preparing for interview ? Top 23 CDN Questions</h3>
@@ -189,7 +206,7 @@
 
 
     <footer id="footer">
-        <div class="container">
+        <div class="containers">
             <div class="copyright">
                 &copy; <strong><span>YashThakareblogs</span></strong>
             </div>

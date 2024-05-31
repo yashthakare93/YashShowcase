@@ -1,7 +1,9 @@
 body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
-    z-index: 999;
+    margin: 0;
+    padding: 0;
+    
 }
 
 .navbar-brand {
@@ -14,7 +16,7 @@ body {
 }
 
 .blog-title {
-    
+ 
     margin-top: 20px;
     font-size: 2.5rem;
     color: #333;
@@ -122,4 +124,38 @@ footer {
     max-width: 250px; /* Adjust as needed */
     height: auto;
     margin-bottom: 10px;
+}
+
+@media (max-width: 576px) {
+    body{
+        line-height: 1;
+    }
+    .blog-title {
+        font-size: 1.5rem;
+    }
+    
+    .toc ul li a {
+        font-size: 0.3rem;
+    }
+
+    .nav-link{
+        font-size: 0.5rem;
+        line-height: 0;
+    }
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 90%;
+    }
+
+    .card-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .card-content p {
+        font-size: 0.9rem;
+    }
 }
