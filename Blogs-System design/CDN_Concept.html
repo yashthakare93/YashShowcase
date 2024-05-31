@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="./assests/blog.css">
     <!-- Favicons -->
     <link href="../assets/img/favicon.png" rel="icon">
     <link href="../assets/img/favicon.png" rel="apple-touch-icon">
@@ -34,7 +34,7 @@
                         <h3>Table of Contents</h3>
                         <a class="nav-link">Introduction to CDN</a>
                         <nav class="nav nav-pills flex-column">
-                            <a class="nav-link ms-3 my-1" href="#evolution-purpose">Evolution and Purpose</a>
+                            <a class="nav-link ms-3 my-1" >Evolution and Purpose</a>
                         </nav>
                         <a class="nav-link">Content Delivery</a>
                         <a class="nav-link">Server Deployment (Point of Presence - PoPs)</a>
@@ -83,7 +83,7 @@
                             <p>CDN is content delivery network has been around since 90s. It was originally developed to
                                 speed up the delivery of static HTML content for users all around the world.
                                 Nowadays, a CDN should be used whenever HTTP traffic is served.</p>
-                            <img src="./img/cdn.webp" alt="CDN Diagram">
+                            <img src="./assests/cdn.webp" alt="CDN Diagram">
                             <h3 id="cdn-working">Working of a CDN</h3>
                             <p><strong>1. Content Distribution:</strong> The CDN consists of a network of servers
                                 distributed across various geographic locations, known as Points of Presence (PoPs).
@@ -96,7 +96,7 @@
                             <p><strong>3. Edge Server Selection:</strong> The CDN's edge server determines the user's
                                 location based on factors such as IP address and network proximity. It then routes the
                                 user's request to the nearest PoP in the CDN network.</p>
-                            <img src="./img/cdnworking.png" alt="CDN Working Diagram">
+                            <img src="./assests/cdnworking.png" alt="CDN Working Diagram">
                             <p><strong>4.Content Delivery:</strong> The edge server at the PoP retrieves the requested
                                 content from the origin server, if it's not already cached locally. It then delivers the
                                 content to the user's browser.</p>
@@ -123,7 +123,7 @@
                                     infrastructure.</li>
                             </ul>
                             <h3>Two common ones are DNS-based routing and Anycast:</h3>
-                            <img src="./img/what-is-anycast-2.webp" alt="">
+                            <img src="./assests/what-is-anycast-2.webp" alt="">
                             <ul>
                                 <li><strong>with DNS-based routing, each PoP has its own IP address. When the user Looks
                                         up the IP address for the CDN,DNS returns the IP address of the PoP closest to
@@ -140,7 +140,7 @@
                                 the load and bandwidth requirements of the original server cluster.</p>
 
                             <h3>Content Transformation / TLS Termination</h3>
-                            <img src="./img/file-concatenation_dafc.webp" alt="">
+                            <img src="./assests/file-concatenation_dafc.webp" alt="">
                             <p>A modern CDN could also transform static content into more optimized formats.
                                 For example, it could minify JavaScript bundles on the fly, or transform an image file
                                 form an old format to modern one like WebP or AVIF.
@@ -200,7 +200,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="blog.js"></script>
+    <script src="./assests/blog.js"></script>
 </body>
 
 </html>

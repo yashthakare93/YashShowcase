@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is API Gateway</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assests/blog.css">
+    <link href="../assets/img/favicon.png" rel="icon">
+    <link href="../assets/img/favicon.png" rel="apple-touch-icon">
+</head>
+
+<body>
+
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Blogs</a></li>
+            <li class="breadcrumb-item"><a href="#">System Design</a></li>
+            <li class="breadcrumb-item active" aria-current="page">API Gateway</li>
+        </ol>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <!-- Table of Contents -->
+            <div class="col-3">
+                <nav id="toc" class="h-0 flex-column pe-4 border-end">
+                    <nav class="nav nav-pills flex-column">
+                        <h3>Table of Contents</h3>
+                        <a class="nav-link">Introduction</a>
+                        <a class="nav-link">What is API Gateway</a>
+                        <a class="nav-link">API Gateway Flow</a>
+                        <a class="nav-link">Rate Limit Check</a>
+                        <a class="nav-link">Authentication Authorization</a>
+                        <a class="nav-link">Critical Service</a>
+                        <a class="nav-link">Conclusion</a>
+                        <!-- Add more sections and subsections as needed -->
+                    </nav>
+                </nav>
+                <!-- References -->
+                <nav id="references" class="h-70 flex-column align-items-stretch pe-4 border-end">
+                    <nav class="nav nav-pills flex-column">
+                        <h3>References</h3>
+                        <li>
+                            <!-- Add your references here -->
+                            <iframe width="250" height="165"
+                                src="https://www.youtube.com/embed/6ULyxuHKxg8?si=4yfK7u0zv-Ym-S36"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </li>
+                    </nav>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-9">
+                <div data-bs-spy="scroll" data-bs-target="#toc" data-bs-smooth-scroll="true" class="scrollspy-example-2"
+                    tabindex="0">
+                    <!-- Blog Title -->
+                    <h1 class="blog-title">What is API Gateway ?</h1>
+                    <div class="blog-post">
+                        <!-- Post Header -->
+                        <div class="post-header" id="section-1">
+                            <!-- Date or other meta information -->
+                            <p><strong>Date:</strong> May 31, 2024</p>
+                        </div>
+                        <!-- Post Content -->
+                        <div class="post-content">
+                            <!-- Add your content here -->
+                            <h3>Introduction</h3>
+                            <p>An API Gateway is a single point of entry to the clients of an application. Its sits
+                                between the clients and the collection of backend services for the application.</p>
+                            <img src="./assests/643fd2fde829634fa4f769a0_6178d93647ddf9f443e800f4_API Gateway example.png"
+                                alt="">
+                               
+                            <p>An API Gateway typically provides several important functions, Some commonly ones are :</p>
+                            
+                            <li>Authentication and security policy enforcements</li>
+                            <li>Load balancing and circuit breaking</li>
+                            <li>Protocol translation and service discovery</li>
+                            <li>Monitoring, logging, analytics, and billing</li><br><hr>
+                            <h3>API Gateway Flow</h3>
+                            <p>Step 1 : Client sends request to API Gateway which is typically HTTP based it can be REST API or GraphQL etc.</p>
+                            <p>Step 2 : API Gateway validates HTTP Request</p>
+                            <p>Step 3 : API Gateway checks IP Address. It can also perform rate limit check such as IP Address and HTTP Headers. </p>
+                            <img src="./assests/api-gateway-flow.png" alt="">
+                            <p>Step 4 : API Request is passes to identity provider for authentication and authorization. </p>
+                            <p>Step 5 : Hight level Rate limit check is applied against authenticated session, over the limit the request is rejected at this point.</p>
+                            <p>Step 6 : With the help of discovery component , API Gateway locates backend service to handle the request by path matching.</p>
+                            <p>Step 7 : API Gateway transform api request into protocol and sends api request to backend service , protocol could be gopc </p>
+                            <p>Step 8 : When the response came from backend service , API Gateway transform response back to public facing protocol and returns response to client </p>
+                            
+                            <p>The API Gateway also provide othe critical service such as error handling and circuit break.</p>
+                            <br>
+                            <h3>What are the key features of an API Gateway?</h3>
+                            <li>Centralized entry point</li>
+                            <li>Load balancing</li>
+                            <li>Caching</li>
+                            <li>Authentication & Authorization</li>
+                            <li>Error handling </li>
+                            <li>Versioning</li>
+                            <p>These features collectively make an API Gateway a powerful tool for managing the complexities of a distributed system.</p>
+                            <h3>Conclusion :</h3>
+                            <p>An API Gateway is a critical piece of the infrastructure, it should be deployed to multiple regions to improve availability. Additionally, it acts as a single entry point for all client requests, managing traffic, authentication, and throttling, which enhances security and performance.</p>
+                            <a href="https://medium.com/@vadadoriyavivek5/mastering-api-gateway-30-interview-q-a-b4932ba1491c">
+                                <h3 style="color: black;"><u>Preparing for interview ? Top 30+ API Gateway Questions</u></h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="copyright">
+                &copy; <strong><span>YashThakareblogs</span></strong>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./assests/blog.js"></script>
+</body>
+
+</html>

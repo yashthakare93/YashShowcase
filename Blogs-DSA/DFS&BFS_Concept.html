@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFS and DFS - Traversing Algorithm</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="blog.css">
+</head>
+
+<body>
+
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="../blogs.html">Blogs</a></li>
+            <li class="breadcrumb-item"><a href="../blogs.html">DSA</a></li>
+            <li class="breadcrumb-item active" aria-current="page">DFS & BFS</li>
+        </ol>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <!-- Table of Contents -->
+            <div class="col-3">
+                <nav id="toc" class="h-0 flex-column pe-4 border-end">
+                    <nav class="nav nav-pills flex-column">
+                        <h3>Table of Contents</h3>
+                        <a class="nav-link">Introduction</a>
+                        <a class="nav-link">DFS Working</a>
+                        <a class="nav-link">BFS Working</a>
+                        <a class="nav-link">Time Complexity</a>
+                        <a class="nav-link">DFS vs BFS</a>
+                    </nav>
+                </nav>
+                <!-- References -->
+                <nav id="references" class="h-70 flex-column align-items-stretch pe-4 border-end">
+                    <nav class="nav nav-pills flex-column">
+                        <h3>References</h3>
+                        <li>
+                            <!-- Add your references here -->
+                            <iframe width="250" height="165" src="https://www.youtube.com/embed/VIDEO_ID"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </li>
+                    </nav>
+                </nav>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-9">
+                <div data-bs-spy="scroll" data-bs-target="#toc" data-bs-smooth-scroll="true" class="scrollspy-example-2"
+                    tabindex="0">
+                    <!-- Blog Title -->
+                    <h1 class="blog-title">DFS and BFS</h1>
+                    <div class="blog-post">
+                        <!-- Post Header -->
+                        <div class="post-header" id="section-1">
+                            <!-- Date or other meta information -->
+                            <p><strong>Date:</strong> May 30, 2024</p>
+                        </div>
+                        <!-- Post Content -->
+                        <div class="post-content">
+                            <!-- Add your content here -->
+                            <h3>Exploring Depth First Search (DFS)</h3>
+                            <br>
+                            <h4>Introduction</h4>
+                            <p>Depth-First Search (DFS) is a fundamental graph traversal algorithm used in many computer
+                                science applications. It explores as far as possible along each branch before
+                                backtracking, making it an excellent choice for problems that require exhaustive search
+                                of all possible paths or configurations</p>
+                            <br>
+                            <h4>How DFS Works</h4>
+                            <p>DFS starts at a chosen node (root in the case of trees) and explores each branch as
+                                deeply as possible before moving on to the next branch. This is typically implemented
+                                using recursion or a stack.</p>
+                            <h5>Pseudocode for DFS :</h5>
+                            <p>Recursive Implementation :</p>
+                            <pre><code>def dfs_recursive(graph, start, visited=None):
+    if visited is None:
+        visited = set()
+        visited.add(start)
+        print(start)  # Process the node
+        for next in graph[start] - visited:
+            dfs_recursive(graph, next, visited)
+        return visited</code></pre>
+                            <br>
+                            <h4>Application of DFS :</h4>
+                            <li>Path Finding: Finding paths from a source to a destination in a maze.</li>
+                            <li> Topological Sorting: Ordering tasks or jobs based on dependencies.</li>
+                            <li> Cycle Detection: Detecting cycles in a graph.</li>
+                            <li> Solving Puzzles: Such as the N-Queens problem, Sudoku, etc.</li>
+                            <br>
+                            <h4>Complexity :</h4>
+                            <li><strong>Time Complexity </strong>: O(V + E), where V is the number of vertices and E is
+                                the number of edges.</li>
+                            <li><strong>Space Complexity </strong>: O(V), due to the stack/recursion depth.</li>
+                            <br><br>
+                            <h3>Exploring Best First Search (BFS)</h3>
+                            <br>
+                            <h4>Introduction</h4>
+                            <p>Breadth-First Search (BFS) is another fundamental graph traversal algorithm widely used
+                                in computer science. Unlike DFS, BFS explores all neighbors at the present depth prior
+                                to moving on to nodes at the next depth level.</p>
+                            <br>
+                            <h4>How BFS Works</h4>
+                            <p>BFS starts at the chosen node (root in trees) and explores all its neighbors first, then
+                                moves on to the neighbors of those neighbors, and so on. This approach ensures that the
+                                algorithm visits nodes in layers or levels.</p>
+                            <h5>Pseudocode for BFS :</h5>
+                            <p>Iterative Implementation :</p>
+                            <pre><code>from collections import deque
+    def bfs(graph, start):
+        queue = set(), deque([start])
+        while queue:
+                vertex = queue.popleft()
+                if vertex not in visited:
+                        visited.add(vertex)
+                        print(vertex)  # Process the node
+                        queue.extend(graph[vertex] - visited)
+                return visited</code></pre>
+                            <br>
+                            <h4>Application of BFS :</h4>
+                            <li>Shortest Path: Finding the shortest path in an unweighted graph.
+                            </li>
+                            <li> Level Order Traversal: Traversing each level of a tree.</li>
+                            <li>Web Crawlers: Indexing web pages linked to each other.</li>
+                            <li> Social Networks: Finding all friends at a given distance in social networks.</li>
+                            <br>
+                            <h4>Complexity :</h4>
+                            <li><strong>Time Complexity </strong>: O(V + E), where V is the number of vertices and E is
+                                the number of edges.</li>
+                            <li><strong>Space Complexity </strong>: O(V), due to the queue storing all vertices in the worst case..</li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="copyright">
+                &copy; <strong><span>YashThakareblogs</span></strong>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>
