@@ -106,6 +106,7 @@ footer {
 
 .container {
     display: flex;
+
 }
 
 .content {
@@ -128,7 +129,7 @@ footer {
 @media (max-width: 576px) {
     body{
         line-height: 1;
-        
+ 
     }
     .blog-title {
         font-size: 1.5rem;
@@ -142,20 +143,23 @@ footer {
         font-size: 0.5rem;
         line-height: 0;
     }
-    .card-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        max-width: 90%;
-    }
-
-    .card-content h3 {
-        font-size: 1.2rem;
-    }
-
-    .card-content p {
-        font-size: 0.9rem;
-    }
+    
 }
+pre {
+    max-width: 100%;
+    width: 90%; /* Adjust as needed */
+    margin: 0 auto; /* Center the pre element */
+    background-color: #00002e;
+    color: #dcdcdc;
+    padding: 20px;
+    border-radius: 5px;
+    overflow: auto;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+
+code {
+    font-family: Consolas, "Courier New", monospace;
+}
+

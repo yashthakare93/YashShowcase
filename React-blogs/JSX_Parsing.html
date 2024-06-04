@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How JSX Parsing Works ? Uncovering the Magic Behind React's Syntax </title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assests/blog.css">
+    <!-- Favicons -->
+    <link href="../assets/img/favicon.png" rel="icon">
+    <link href="../assets/img/favicon.png" rel="apple-touch-icon">
+    <!-- Include CodeMirror CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.css">
+    <!-- Include CodeMirror Theme (optional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/theme/dracula.min.css">
+    <style>
+        /* Custom styling for the editor */
+        .CodeMirror {
+            border: 1px solid #ccc;
+            height: auto;
+            width: 660px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="../blogs.html">Blogs</a></li>
+            <li class="breadcrumb-item"><a href="#">React</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Understanding JSX Parsing</li>
+        </ol>
+    </nav>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <nav id="navbar-example3" class=" h-0 flex-column  pe-4 border-end">
+                    <nav class="nav nav-pills flex-column">
+                        <h3>Table of Contents</h3>
+                        <a class="nav-link">Introduction</a>
+
+                        <a class="nav-link">What is JSX ?</a>
+
+                        <a class="nav-link">How does JSX get Transformed ?</a>
+                        <a class="nav-link">What Does React.createElement Do?</a>
+
+
+                    </nav>
+
+                </nav>
+                <nav id="navbar-example3"
+                    class="toc h-70 flex-column align-items-stretch pe-4 border-end d-none d-md-flex">
+                    <nav class="nav nav-pills flex-column">
+                        <h3>References </h3>
+
+                        <li class="ref">
+
+                            <iframe width="250" height="165"
+                                src="https://www.youtube.com/embed/_ze46JgZpd4?si=DocondZiD4Eu2rhf"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="250" height="165"
+                                src="https://www.youtube.com/embed/p9m_v9OxfAM?si=T6aO-wA-2nUmgY2D"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </li>
+                    </nav>
+                </nav>
+
+            </div>
+
+            <div class="col-12 col-md-8">
+                <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true"
+                    class="scrollspy-example-2" tabindex="0">
+
+                    <h1 class="blog-title">How JSX Parsing Works ?</h1>
+                    <div class="blog-post">
+                        <div class="post-header" id="what-is-cdn">
+
+                            <p><strong>Date:</strong> June 2, 2024</p>
+                        </div>
+                        <div class="post-content">
+                            <p>JSX (JavaScript XML) is a key feature of React that lets developers write HTML-like code
+                                inside JavaScript. It makes building UI components easier and more intuitive. In this
+                                blog
+                                post, we'll explain how JSX parsing works and how it turns your code into something the
+                                browser can understand.</p>
+                            <h3>What is JSX ?</h3>
+                            <p>JSX is a syntax extension for JavaScript, introduced by React, that allows developers to
+                                write HTML-like code within their JavaScript files. </p>
+                            <textarea id="code1"> const element = <h1>Hello, world!</h1>;
+                            </textarea><br>
+                            <h3>How Does JSX Get Transformed?</h3>
+                            <p>1. Writing jsx</p>
+                            <textarea id="code2"> const element = <h1>Hello, world!</h1>;
+                            </textarea><br>
+                            <p>2. Babel Transpilation</p>
+                            <p>A tool called Babel converts JSX into JavaScript. This step is necessary because browsers
+                                don’t understand JSX directly.</p>
+                            <h3>Why do we use babel ?</h3>
+                            <p>Babel is a JavaScript compiler that allows you to use next-generation JavaScript today.
+                                It helps in transforming JSX into a format that browsers can understand. Modern
+                                JavaScript features and JSX are not natively supported by all browsers, especially older
+                                versions. Babel transpiles this code into a version of JavaScript that can run in any
+                                browser.
+
+                                By using Babel, you ensure that your React code is compatible across different
+                                environments, making your applications more robust and widely accessible. Babel also
+                                enables other transformations, such as converting ES6+ syntax to ES5, which further
+                                broadens compatibility. <a href="https://babeljs.io/">Learn more about Babel.</a></p>
+                            <p>3. Transformend JavaScript</p>
+                            <p>Babels changes the JSX to :</p>
+                            <textarea id="code3"> const element = React.createElement('h1', null, 'Hello, world!');
+                            </textarea>
+                            <p>Here, React.createElement is a function call that creates a React element.</p>
+                            <br>
+                            <img src="./assests/jsx-flow-e1539150962884.jpg" alt=""><br>
+                            <h3>What Does React.createElement Do?</h3>
+                            <p>React.createElement takes three arguments:
+                                <li>Type: The type of the element (e.g., 'div', 'h1').
+                                </li>
+                                <li>Props: An object with the element’s properties (or attributes).</li>
+                                <li>Children: The child elements or text inside the element.</li>
+                            </p>
+                            <p>Example :</p>
+                            <textarea id="code4"> const element = React.createElement(
+    'h1', 
+    null, 
+    'Hello, world!'
+);
+                            </textarea>
+                        </div>
+                        </div>
+                        <nav id="navbar-example3"
+                            class="toc h-70 flex-column align-items-stretch pe-4 d-md-none border-end">
+                            <nav class="nav nav-pills flex-column">
+                                <h3>References </h3>
+
+                                <li class="ref">
+                                    <iframe width="250" height="165"
+                                        src="https://www.youtube.com/embed/8zX0rue2Hic?si=ACW_-97MTlzRuryL"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    <iframe width="250" height="165"
+                                        src="https://www.youtube.com/embed/RI9np1LWzqw?si=T2_-gTsRMbhtPsmY"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </li>
+                            </nav>
+                        </nav>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="containers">
+            <div class="copyright">
+                &copy; <strong><span>DailyDevYTblogs</span></strong>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.js"></script>
+    <!-- Include CodeMirror JavaScript Mode for JSX -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/jsx/jsx.min.js"></script>
+    <!-- Include CodeMirror JavaScript Keymap (optional) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/keymap/sublime.min.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./assests/blog.js"></script>
+</body>
+
+</html>

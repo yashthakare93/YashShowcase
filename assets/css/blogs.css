@@ -61,7 +61,7 @@ main {
 
 .card img {
     width: 100%;
-    height: 200px;
+    height: 180px;
     display: block;
 }
 
@@ -118,4 +118,47 @@ footer {
         width: 100px; 
         height: 200px; 
     }
+}
+
+.info {
+    height: 260px;
+    justify-content: center;
+    color: white;
+}
+
+.info h1{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+}
+
+.container-fluid{
+    color:white;
+}
+.read-more {
+    align-items: center;
+    font-size: 12px;
+    display: inline-block;
+    color:rgb(181, 0, 0);
+    text-decoration: none;
+}
+.read-more:hover {
+    color:red;
+}
+.read-more::after {
+    content: ' →';
+    color: #333;
+}
+.social-profiles {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+.social-profiles li {
+    margin-right: 10px;
+}
+.social-profiles li:last-child {
+    margin-right: 0;
+}
+.social-profiles a i{
+    color: #1f8dc4;
 }
