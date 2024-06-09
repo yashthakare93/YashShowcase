@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding React Components: A Beginner's Guide </title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assests/blog.css">
+    <!-- Favicons -->
+    <link href="../assets/img/favicon.png" rel="icon">
+    <link href="../assets/img/favicon.png" rel="apple-touch-icon">
+    <!-- Include CodeMirror CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.css">
+    <!-- Include CodeMirror Theme (optional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/theme/dracula.min.css">
+    <style>
+        /* Custom styling for the editor */
+        .CodeMirror {
+            border: 1px solid #ccc;
+            height: auto;
+            width: 660px;
+        }
+    </style>
+</head>
+
+<body style="text-align: justify;">
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="../blogs.html">Blogs</a></li>
+            <li class="breadcrumb-item"><a href="#">React</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Understanding React Components</li>
+        </ol>
+    </nav>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <nav id="navbar-example3" class=" h-0 flex-column  pe-4 border-end">
+                    <nav class="nav nav-pills flex-column">
+                        <h3>Table of Contents</h3>
+                        <a class="nav-link">Introduction</a>
+                        <a class="nav-link">Functional Component</a>
+                        <a class="nav-link">Class Component</a>
+                        <a class="nav-link">Component LifeCycle Methods</a>
+
+                    </nav>
+
+                </nav>
+                <nav id="navbar-example3"
+                    class="toc h-70 flex-column align-items-stretch pe-4 border-end d-none d-md-flex">
+                    <nav class="nav nav-pills flex-column">
+                        <h3>References </h3>
+
+                        <li class="ref">
+
+                            <iframe width="250" height="165"
+                                src="https://www.youtube.com/embed/UbLYdbOPLe8?si=wXdKQUd3SeNHayyP"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </li>
+                    </nav>
+                </nav>
+
+            </div>
+
+            <div class="col-12 col-md-8">
+                <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true"
+                    class="scrollspy-example-2" tabindex="0">
+
+                    <h1 class="blog-title">What are Components in React ?</h1>
+                    <div class="blog-post">
+                        <div class="post-header">
+
+                            <p><strong>Date:</strong> June 5, 2024</p>
+                        </div>
+                        <div class="post-content">
+                            <p>React, a popular JavaScript library for building user interfaces, is all about
+                                components. Components are the building blocks of any React application, allowing you to
+                                split the UI into independent, reusable pieces. In this blog, we'll explore the
+                                different types of components in React, how to manage state and props, and how to handle
+                                events.</p>
+                                <img src="./assests/reactComponentFlow.png" alt="">
+                            <h3>1. Functional Component</h3>
+                            <p>Function components are the simplest way to write components in React. They are
+                                JavaScript functions that return JSX (JavaScript XML).</p>
+                            <img src="./assests/FunctionalComponent.png" style="width: 700px;">
+                            <h3>2. Class Component</h3>
+                            <p>Class components are a more traditional way to define components. They are ES6 classes
+                                that extend React.Component and have a render method that returns JSX.</p>
+                            <img src="./assests/classcomponent.png" style="width: 700px;">
+                            <h3>3. Component Lifecycle Methods (Class Components)</h3>
+                            <p>Class components have lifecycle methods that allow you to run code at specific times in
+                                the component's life. Here are some key lifecycle methods:</p>
+                                <li>componentDidMount: Invoked immediately after a component is mounted (inserted into the tree).</li>
+                                <li>componentDidUpdate: Invoked immediately after updating occurs.</li>
+                                <li>componentWillUnmount: Invoked immediately before a component is unmounted and destroyed.</li>
+                            
+                            
+                        </div>
+                        <nav id="navbar-example3"
+                            class="toc h-70 flex-column align-items-stretch pe-4 d-md-none border-end">
+                            <nav class="nav nav-pills flex-column">
+                                <h3>References </h3>
+
+                                <li class="ref">
+                                    <iframe width="250" height="165"
+                                        src="https://www.youtube.com/embed/UbLYdbOPLe8?si=wXdKQUd3SeNHayyP"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </li>
+                            </nav>
+                        </nav>
+                        <div><br>
+                            <a href="https://www.simplilearn.com/tutorials/reactjs-tutorial/reactjs-interview-questions">
+                                <h3 style="color: black;">40 + Reactjs interview questions</h3>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="containers">
+            <div class="copyright">
+                &copy; <strong><span>DailyDevYTblogs</span></strong>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.js"></script>
+    <!-- Include CodeMirror JavaScript Mode for JSX -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/jsx/jsx.min.js"></script>
+    <!-- Include CodeMirror JavaScript Keymap (optional) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/keymap/sublime.min.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./assests/blog.js"></script>
+</body>
+
+</html>
