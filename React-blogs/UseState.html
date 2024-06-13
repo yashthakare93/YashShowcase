@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Understanding React Components: A Beginner's Guide </title>
+    <title>Understanding useState in React</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -12,8 +12,8 @@
     <!-- Favicons -->
     <link href="../assets/img/favicon.png" rel="icon">
     <link href="../assets/img/favicon.png" rel="apple-touch-icon">
-  
-   
+
+
 </head>
 
 <body style="text-align: justify;">
@@ -23,7 +23,7 @@
             <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
             <li class="breadcrumb-item"><a href="../blogs.html">Blogs</a></li>
             <li class="breadcrumb-item"><a href="#">React</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Understanding React Components</li>
+            <li class="breadcrumb-item active" aria-current="page">UseState</li>
         </ol>
     </nav>
 
@@ -35,9 +35,9 @@
                     <nav class="nav nav-pills flex-column">
                         <h3>Table of Contents</h3>
                         <a class="nav-link">Introduction</a>
-                        <a class="nav-link">Functional Component</a>
-                        <a class="nav-link">Class Component</a>
-                        <a class="nav-link">Component LifeCycle Methods</a>
+                        <a class="nav-link">What is UseState ?</a>
+                        <a class="nav-link">Syntax of useState </a>
+                        <a class="nav-link">Usage and Example</a>
 
                     </nav>
 
@@ -50,7 +50,7 @@
                         <li class="ref">
 
                             <iframe width="250" height="165"
-                                src="https://www.youtube.com/embed/UbLYdbOPLe8?si=wXdKQUd3SeNHayyP"
+                                src="https://www.youtube.com/embed/pe5ulXojRO8?si=V7-IxIemde11UtnI&amp;start=127"
                                 title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -64,35 +64,45 @@
                 <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true"
                     class="scrollspy-example-2" tabindex="0">
 
-                    <h1 class="blog-title">What are Components in React ?</h1>
+                    <h1 class="blog-title">
+                        Understanding useState in React</h1>
                     <div class="blog-post">
                         <div class="post-header">
 
-                            <p><strong>Date:</strong> June 5, 2024</p>
+                            <p><strong>Date:</strong> June 12, 2024</p>
                         </div>
                         <div class="post-content">
-                            <p>React, a popular JavaScript library for building user interfaces, is all about
-                                components. Components are the building blocks of any React application, allowing you to
-                                split the UI into independent, reusable pieces. In this blog, we'll explore the
-                                different types of components in React, how to manage state and props, and how to handle
-                                events.</p>
-                                <img src="./assests/reactComponentFlow.png" alt="">
-                            <h3>1. Functional Component</h3>
-                            <p>Function components are the simplest way to write components in React. They are
-                                JavaScript functions that return JSX (JavaScript XML).</p>
-                            <img src="./assests/FunctionalComponent.png" style="width: 700px;">
-                            <h3>2. Class Component</h3>
-                            <p>Class components are a more traditional way to define components. They are ES6 classes
-                                that extend React.Component and have a render method that returns JSX.</p>
-                            <img src="./assests/classcomponent.png" style="width: 700px;">
-                            <h3>3. Component Lifecycle Methods (Class Components)</h3>
-                            <p>Class components have lifecycle methods that allow you to run code at specific times in
-                                the component's life. Here are some key lifecycle methods:</p>
-                                <li>componentDidMount: Invoked immediately after a component is mounted (inserted into the tree).</li>
-                                <li>componentDidUpdate: Invoked immediately after updating occurs.</li>
-                                <li>componentWillUnmount: Invoked immediately before a component is unmounted and destroyed.</li>
-                            
-                            
+                            <p>React is a powerful JavaScript library for building user interfaces, and one of its most
+                                essential hooks is useState. This hook allows you to add state to functional components,
+                                making it easier to manage and update the UI dynamically. In this blog post, we’ll
+                                explore the useState hook in detail, including its syntax, usage, and practical
+                                examples.</p>
+                            <h4>What is useState ?</h4>
+                            <p>useState is a hook that lets you add state to functional
+                                components. Before hooks, state management was only possible in class components. With
+                                useState, you can now manage state directly within functional components, which promotes
+                                cleaner and more concise code.</p>
+                            <h4>Syntax of useState :</h4>
+                            <img src="./assests/useStatesyntax.png" alt="">
+                            <li><b>state :</b> The current state value.</li>
+                            <li><b>setState :</b> A function that updates the state.</li>
+                            <li><b>initialState :</b> The initial value of the state.</li><br>
+                            <h4>Using useState : A simple Example</h4>
+                            <img src="./assests/useStateexample.png" alt="">
+                            <p>In this example :</p>
+                            <li>We import useState from React.</li>
+                            <li> We initialize a state variable count with a default value of 0.</li>
+                            <li>We create a button that, when clicked, updates the count state using the setCount
+                                function.</li> <br>
+                            <h4>Handling Multiple State Variables</h4>
+                            <p>You can use useState multiple times within the same component to manage different pieces
+                                of state independently.</p>
+                            <img src="./assests/useStatemultiplestate.png" alt="">
+                            <br>
+                            <h4>Conclusion :</h4>
+                            <p>The useState hook is a fundamental tool in the React ecosystem, enabling functional
+                                components to manage state effectively. By understanding its syntax and best practices,
+                                you can write more concise and maintainable React components.</p>
                         </div>
                         <nav id="navbar-example3"
                             class="toc h-70 flex-column align-items-stretch pe-4 d-md-none border-end">
@@ -101,15 +111,16 @@
 
                                 <li class="ref">
                                     <iframe width="250" height="165"
-                                        src="https://www.youtube.com/embed/UbLYdbOPLe8?si=wXdKQUd3SeNHayyP"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                src="https://www.youtube.com/embed/pe5ulXojRO8?si=V7-IxIemde11UtnI&amp;start=127"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </li>
                             </nav>
                         </nav>
                         <div><br>
-                            <a href="https://www.simplilearn.com/tutorials/reactjs-tutorial/reactjs-interview-questions">
+                            <a
+                                href="https://www.simplilearn.com/tutorials/reactjs-tutorial/reactjs-interview-questions">
                                 <h3 style="color: black;">40 + Reactjs interview questions</h3>
                             </a>
                         </div>
