@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding useEffect in React</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assests/blog.css">
+    <!-- Favicons -->
+    <link href="../assets/img/favicon.png" rel="icon">
+    <link href="../assets/img/favicon.png" rel="apple-touch-icon">
+
+
+</head>
+
+<body style="text-align: justify;">
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="../blogs.html">Blogs</a></li>
+            <li class="breadcrumb-item"><a href="#">React</a></li>
+            <li class="breadcrumb-item active" aria-current="page">UseEffect</li>
+        </ol>
+    </nav>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <nav id="navbar-example3" class=" h-0 flex-column  pe-4 border-end">
+                    <nav class="nav nav-pills flex-column">
+                        <h3>Table of Contents</h3>
+                        <a class="nav-link">Introduction</a>
+                        <a class="nav-link">Basic Usage</a>
+                        <a class="nav-link">Dependencies Array</a>
+                        <a class="nav-link">CleanUp</a>
+                        <a class="nav-link">Multiple `useEffect` hooks</a>
+                    </nav>
+
+                </nav>
+                <nav id="navbar-example3"
+                    class="toc h-70 flex-column align-items-stretch pe-4 border-end d-none d-md-flex">
+                    <nav class="nav nav-pills flex-column">
+                        <h3>References </h3>
+
+                        <li class="ref">
+
+                            <iframe width="250" height="165"
+                                src="https://www.youtube.com/embed/pe5ulXojRO8?si=V7-IxIemde11UtnI&amp;start=127"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </li>
+                    </nav>
+                </nav>
+
+            </div>
+
+            <div class="col-12 col-md-8">
+                <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true"
+                    class="scrollspy-example-2" tabindex="0">
+
+                    <h1 class="blog-title">Understanding useEffect in React</h1>
+                    <div class="blog-post">
+                        <div class="post-header">
+
+                            <p><strong>Date:</strong> June 13, 2024</p>
+                        </div>
+                        <div class="post-content">
+                            <h4>Introduction</h4>
+                            <p>React's useEffect hook is a powerful feature for managing side effects in functional
+                                components. Side effects can include fetching data, directly manipulating the DOM,
+                                setting up subscriptions, and more. Prior to hooks, managing these effects required
+                                class components and lifecycle methods like componentDidMount, componentDidUpdate, and
+                                componentWillUnmount. With useEffect, you can handle all these scenarios in a functional
+                                component.</p>
+                            <h4>Basic Usage</h4>
+                            <p>The useEffect hook takes two arguments: a function (the effect) and an optional array of
+                                dependencies. The function runs after the initial render and after every update unless
+                                specified otherwise.</p>
+                            <img src="./assests/useeffectusage.png" alt="">
+                            <h4>Dependencies Array</h4>
+                            <p>The second argument to useEffect is an array of dependencies. The effect runs only when
+                                one of the dependencies has changed. If the array is empty, the effect runs only once,
+                                similar to componentDidMount.</p>
+                                <img src="./assests/useeffectdependency.png" alt="">
+                            <h4>CleanUp</h4>
+                            <p>The effect function can return a cleanup function, which React will run before the effect
+                                runs again and when the component unmounts. This is useful for cleanup tasks like
+                                removing event listeners or canceling network requests.</p>
+                                <img src="./assests/useeffectcleanup.png" alt="">
+                            <h4>Multiple `useEffect` hooks</h4>
+                            <p>You can use multiple useEffect hooks within a single component to separate concerns.</p>
+                            <img src="./assests/useeffectmultiplehooks.png" alt="">
+                        </div>
+                        <nav id="navbar-example3"
+                            class="toc h-70 flex-column align-items-stretch pe-4 d-md-none border-end">
+                            <nav class="nav nav-pills flex-column">
+                                <h3>References </h3>
+
+                                <li class="ref">
+                                    <iframe width="250" height="165"
+                                        src="https://www.youtube.com/embed/pe5ulXojRO8?si=V7-IxIemde11UtnI&amp;start=127"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </li>
+                            </nav>
+                        </nav>
+                        <div><br>
+                            <a
+                                href="https://www.simplilearn.com/tutorials/reactjs-tutorial/reactjs-interview-questions">
+                                <h3 style="color: black;">40 + Reactjs interview questions</h3>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="containers">
+            <div class="copyright">
+                &copy; <strong><span>DailyDevYTblogs</span></strong>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.js"></script>
+    <!-- Include CodeMirror JavaScript Mode for JSX -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/jsx/jsx.min.js"></script>
+    <!-- Include CodeMirror JavaScript Keymap (optional) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/keymap/sublime.min.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./assests/blog.js"></script>
+</body>
+
+</html>
